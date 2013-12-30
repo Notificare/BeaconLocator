@@ -1,18 +1,65 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4451" systemVersion="13A461" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3676"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--Beacon Locator View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="BeaconLocatorViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hyU-HH-Abs"/>
+                        <viewControllerLayoutGuide type="bottom" id="BXP-wQ-TJV"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beacon Found:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lk4-3l-z4H">
+                                <rect key="frame" x="101" y="151" width="118" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beacon RSSI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="025-jW-VPn">
+                                <rect key="frame" x="73" y="192" width="174" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Major" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1R-Xq-yVd">
+                                <rect key="frame" x="138" y="240" width="44" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R06-K0-Y8U">
+                                <rect key="frame" x="138" y="286" width="44" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="025-jW-VPn" firstAttribute="top" secondItem="Lk4-3l-z4H" secondAttribute="bottom" constant="20" id="4Na-bS-cmx"/>
+                            <constraint firstItem="Lk4-3l-z4H" firstAttribute="top" secondItem="hyU-HH-Abs" secondAttribute="bottom" constant="131" id="G7j-bX-JaQ"/>
+                            <constraint firstItem="M1R-Xq-yVd" firstAttribute="top" secondItem="025-jW-VPn" secondAttribute="bottom" constant="27" id="Udo-az-an0"/>
+                            <constraint firstItem="025-jW-VPn" firstAttribute="centerX" secondItem="Lk4-3l-z4H" secondAttribute="centerX" id="YKL-50-0GB"/>
+                            <constraint firstItem="R06-K0-Y8U" firstAttribute="top" secondItem="M1R-Xq-yVd" secondAttribute="bottom" constant="25" id="Yhp-q5-x0B"/>
+                            <constraint firstItem="R06-K0-Y8U" firstAttribute="leading" secondItem="M1R-Xq-yVd" secondAttribute="leading" id="YkY-bI-FGz"/>
+                            <constraint firstItem="M1R-Xq-yVd" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="bxX-9T-q8c"/>
+                            <constraint firstItem="M1R-Xq-yVd" firstAttribute="centerX" secondItem="025-jW-VPn" secondAttribute="centerX" id="mke-rz-13C"/>
+                            <constraint firstItem="025-jW-VPn" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="73" id="uka-VJ-Nh1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="beaconMajorLabel" destination="M1R-Xq-yVd" id="1KK-ad-iDI"/>
+                        <outlet property="beaconMinorLabel" destination="R06-K0-Y8U" id="6dd-Zh-PCL"/>
+                        <outlet property="beaconRSSILabel" destination="025-jW-VPn" id="5Qd-IJ-4Yi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

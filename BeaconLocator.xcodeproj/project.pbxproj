@@ -200,6 +200,13 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Notificare;
 				TargetAttributes = {
+					A9BD1FF61859FEC700417A6F = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
 					A9BD20171859FEC700417A6F = {
 						TestTargetID = A9BD1FF61859FEC700417A6F;
 					};
@@ -461,6 +468,7 @@
 				A9BD202B1859FEC700417A6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A9BD202C1859FEC700417A6F /* Build configuration list for PBXNativeTarget "BeaconLocatorTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +477,7 @@
 				A9BD202E1859FEC700417A6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
